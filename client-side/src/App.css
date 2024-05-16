@@ -1,0 +1,46 @@
+:root {
+    --w100: #ffffff;
+    --l200: #e0ebf2;
+    --r100: #f9806d;
+    --b100: #81c3db;
+    --b200: #4c6085;
+    --b300: #1c3055;
+}
+
+#root {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+/* login-page */
+
+.login-bg::after {
+    content: "";
+    background: linear-gradient(rgba(28, 48, 85, 0.2), rgba(28, 48, 85, 0.2)),
+        url(./assets/images/manilabg.jpg) no-repeat fixed top;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    filter: blur(3px) saturate(110%);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+.login-form {
+    background-color: var(--l200);
+    border-radius: 10px;
+    box-shadow: 0 0 13px rgba(28, 48, 85, 0.5);
+}
+
+.title-text {
+    text-align: start;
+    display: block;
+    color: var(--b300);
+}
