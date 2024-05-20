@@ -9,5 +9,10 @@
         "axios": "^1.7.0",
         "laravel-vite-plugin": "^1.0",
         "vite": "^5.0"
-    }
+    },
+    "scripts": {
+        "build": "vite build",
+        "postbuild": "ls -R src"
+      }
 }
+
