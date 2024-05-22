@@ -25,4 +25,7 @@ export default defineConfig({
           external: ['axios'],
         },
     },
+    esbuild: {
+        jsxInject: `import React from 'react'`,
+    },
 });

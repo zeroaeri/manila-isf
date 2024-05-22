@@ -5,12 +5,9 @@
     ],
     "headers": [
       {
-        "source": "/(.*).jsx",
+        "source": "/(.*)\\.jsx?$",
         "headers": [
-          {
-            "key": "Content-Type",
-            "value": "application/javascript"
-          }
+          { "key": "Content-Type", "value": "application/javascript" }
         ]
       }
     ]
