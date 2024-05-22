@@ -1,7 +1,32 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
 
-// https://vitejs.dev/config/
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
-  plugins: [react()],
-})
+    plugins: [
+        laravel({
+            input: ["resources/css/app.css", "resources/js/app.js"],
+            refresh: true,
+        }),
+        react()
+    ],
+    server: {
+        hmr: {
+            host: "localhost",
+            protocol: "ws",
+        },
+        watch: {
+            usePolling: true,
+        },
+    },
+    build: {
+        rollupOptions: {
+          external: ['axios'],
+          format: 'esm',
+        },
+    },
+    esbuild: {
+        jsxInject: `import React from 'react'`,
+    },
+});
