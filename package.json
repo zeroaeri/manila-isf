@@ -2,9 +2,13 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
         "dev": "vite",
         "build": "vite build",
-        "postbuild": "ls -R src"
+        "postbuild": "ls -R src",
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^4.2.1",
