@@ -2,5 +2,16 @@
 {
     "rewrites": [
       { "source": "/(.*)", "destination": "client-side/src/index.html" }
+    ],
+    "headers": [
+      {
+        "source": "/(.*).jsx",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/javascript"
+          }
+        ]
+      }
     ]
 }
